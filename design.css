@@ -101,9 +101,6 @@ aside{
     font-size: 70%;
 }
 
-tr{
-    border: solid 1px white;
-}
 
 .header-row th{
     border-left: white solid 1px;
@@ -117,7 +114,6 @@ tr{
 
 td{
     text-align: center;
-    border: 1px solid white;
     margin: 1% 1% 1% 1%;
 }
 
@@ -132,16 +128,27 @@ td{
 
 .even td{
     background: rgb(172, 32, 32, 0.4);
-    border: white solid 1px;
 }
 
 .odd td{
     background: rgb(0, 0, 255, 0.4);
-    border: white solid 1px;
 }
 
 .lecture{
     color: red;
+    border: white solid 1px;
+}
+
+.lecture .show-on-hover{
+    display:none;
+}
+
+.lecture:hover .show-on-hover{
+    display:block;
+}
+
+.lecture:hover .hide-on-hover{
+    display:none;
 }
 
 .lecture:hover{
@@ -150,13 +157,28 @@ td{
 
 .exercise{
     color: green;
+    border: white solid 1px;
 }
+
+
+.exercise .show-on-hover{
+    display:none;
+}
+
+.exercise:hover .show-on-hover{
+    display:block;
+}
+
+.exercise:hover .hide-on-hover{
+    display:none;
+}
+
 
 .exercise:hover{
     background:white;
 }
 
-.free-time{
+td .free-time .odd{
     border: none;
     background: rgb(0, 0, 0,0);
 }
