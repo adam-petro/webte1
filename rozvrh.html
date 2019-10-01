@@ -8,7 +8,7 @@
     </head>
     <body>
 
-        <div class="navbar">
+        <header class="navbar">
             <h1 class="name-title"> Adam Petro </h1>
             <nav class="nav-links">
                 <ul>
@@ -17,6 +17,63 @@
                     <li><a href="zivotopis.html">Môj životopis</a></li>
                 </ul>
             </nav>
-        </div>
+        </header>
+
+        <table class="rozvrh">
+            <tr class="header-row">
+                <th>Deň</th>
+                <th> 7:00-8:00 </th>
+                <th> 8:00-9:00 </th>
+                <th> 9:00-10:00 </th>
+                <th> 10:00-11:00 </th>
+                <th> 11:00-12:00 </th>
+                <th> 12:00-13:00 </th>
+                <th> 13:00-14:00 </th>
+                <th> 14:00-15:00 </th>
+                <th> 15:00-16:00 </th>
+                <th> 16:00-17:00 </th>
+                <th> 17:00-18:00 </th>
+                <th> 18:00-19:00 </th>
+                <th> 19:00-20:00 </th>
+                <th> 20:00-21:00 </th>
+            </tr>
+            <tr class="day-row odd">
+                <th>PO</th>
+                <td colspan="2" class="free-time"></td>
+                <td colspan="3" class="lecture"> OS <br> prednáška</td>
+                <td colspan="1" rowspan="4" id="lunch-cell"> O <br> B <br> E <br> D <br> </td>
+                <td colspan="2" class="lecture">KSIF <br> prednáška</td>
+                <td colspan="2" class="exercise">TV <br> cvičenie</td>
+                <td colspan="4" class="free-time"></td>
+            </tr>
+            <tr class="day-row even">
+                <th>UT</th>
+                <td colspan="1" class="free-time"></td>
+                <td colspan="2" class="exercise">SI <br> cvičenie</td>
+                <td colspan="2" class="exercise">KSIF <br> cvičenie</td>
+                <td colspan="2" class="lecture"> WEBTE <br> prednáška</td>
+                <td colspan="6" class="free-time"></td>
+            </tr>
+            <tr class="day-row odd">
+                <th>ST</th>
+                <td colspan="4" class="free-time"></td>
+                <td colspan="1" class="exercise">OS <br> cvičenie</td>
+                <td colspan="3" class="lecture">AZA <br> prednáška</td>
+                <td colspan="5" class="free-time"></td>
+            </tr>
+            <tr class="day-row even">
+                <th>ŠT</th>
+                <td colspan="2" class="free-time"></td>
+                <td colspan="1" class="exercise">AZA <br> cvičenie</td>
+                <td colspan="2" class="exercise">WEBTE <br> cvičenie</td>
+                <td colspan="2" class="lecture">SI <br> prednáška</td>
+                <td colspan="2" class="lecture">WEBTE <br> prednáška</td>
+                <td colspan="4" class="free-time"></td>
+            </tr>
+            <tr class="day-row odd">
+                <th>PI</th>
+                <td colspan="14" class="free-time"></td>
+            </tr>
+        </table>
     </body>
 </html>

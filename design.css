@@ -1,6 +1,23 @@
 
+body{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0px;
+    font-size: 200%;
+}
+
+html { 
+    background: url(img/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
 .name-title{
     font-size: xx-large;
+    margin-left: 1em;
 }
 
 .navbar{
@@ -14,8 +31,7 @@
     background: #3E708B;
     border-bottom: 0.3em;
     border-bottom-style: solid;
-    border-bottom-color: rgb(16, 59, 82);
-    
+    border-bottom-color: rgb(0, 0, 0);
 }
 
 .nav-links{
@@ -31,4 +47,124 @@
 
 .nav-links ul li {
     padding: 0 1em 0 1em;
+}
+
+.img-with-text{
+    margin: 3rem 2rem auto 1rem;
+    text-align: justify;
+}
+
+ .img-caption{
+    background-color: white; 
+    width: 20%;
+    text-align: center;
+    float: left;
+    padding: 2%;
+    margin: auto 5% auto 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img-caption img{
+    border-radius: 10%;
+    width: 100%;
+}
+
+.img-caption p{  
+    border-top: 1px black solid;
+    padding-top: inherit;
+    margin-bottom: 0;
+    font-size: 50%;
+    color: black;
+}
+
+aside{
+    margin: -1.5% 0 1%;
+    float: right;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+#wise-quote{
+    font-style: italic;
+    margin: 1% 2% auto 2%;
+}
+
+#wise-quote-signature{
+    margin: 1% 1% 1% 2%;
+    border-top: solid white;
+}
+
+.rozvrh{
+    margin: auto;
+    width:90%;
+    border: white solid 1px;
+    font-size: 70%;
+}
+
+tr{
+    border: solid 1px white;
+}
+
+.header-row th{
+    border-left: white solid 1px;
+}
+
+.header-row th:first-child{
+    border-left: none;
+}
+
+
+
+td{
+    text-align: center;
+    border: 1px solid white;
+    margin: 1% 1% 1% 1%;
+}
+
+#lunch-cell{
+    background: rgba(56, 189, 67, 0.4);
+}
+
+#lunch-cell:hover{
+    background: white;
+    color: black;
+}
+
+.even td{
+    background: rgb(172, 32, 32, 0.4);
+    border: white solid 1px;
+}
+
+.odd td{
+    background: rgb(0, 0, 255, 0.4);
+    border: white solid 1px;
+}
+
+.lecture{
+    color: red;
+}
+
+.lecture:hover{
+    background: white;
+}
+
+.exercise{
+    color: green;
+}
+
+.exercise:hover{
+    background:white;
+}
+
+.free-time{
+    border: none;
+    background: rgb(0, 0, 0,0);
+}
+
+.free-time:hover{
+    background:black;
+}
+
+.free-time:hover::after{
+    content:"Volny cas";
 }
