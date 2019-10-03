@@ -40,13 +40,37 @@ html {
     justify-content: space-between;
 }
 
+
 .nav-links ul{
     list-style-type: none;
     display: inherit;
+    padding:0;
 }
 
 .nav-links ul li {
+    border: 2px solid black;
+    border-right: none;
+    display: inline-block;
+}
+
+.nav-links ul li:last-child{
+    border-right: 2px solid black;
+}
+
+.nav-links ul li a{
     padding: 0 1em 0 1em;
+    text-decoration: none !important;
+    color: white;
+}
+
+footer{
+    color: black;
+    background: #5580a9;
+    font-size: 65%;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column
 }
 
 .img-with-text{
@@ -84,9 +108,15 @@ aside{
     border-radius: 10px;
 }
 
+.achievements{
+    margin: 3rem 2rem auto 1rem;
+    text-align: justify;
+}
+
 #wise-quote{
     font-style: italic;
     margin: 1% 2% auto 2%;
+    clear:left;
 }
 
 #wise-quote-signature{
@@ -95,48 +125,48 @@ aside{
 }
 
 .rozvrh{
-    margin: auto;
+    margin: 5% auto;
     width:90%;
-    border: white solid 1px;
+    min-width: 10%;
+    background: white;
+    border: black solid 1px;
+    color: black;
     font-size: 70%;
+    
 }
 
 
 .header-row th{
-    border-left: white solid 1px;
+    background: gray;
+}
+
+tr{
+    background: gray;
 }
 
 .header-row th:first-child{
     border-left: none;
 }
 
-
-
 td{
     text-align: center;
     margin: 1% 1% 1% 1%;
 }
+
 
 #lunch-cell{
     background: rgba(56, 189, 67, 0.4);
 }
 
 #lunch-cell:hover{
-    background: white;
-    color: black;
-}
-
-.even td{
-    background: rgb(172, 32, 32, 0.4);
-}
-
-.odd td{
-    background: rgb(0, 0, 255, 0.4);
+    background: white;;
 }
 
 .lecture{
-    color: red;
-    border: white solid 1px;
+    color: white;
+    background: blue;
+    border: black solid 3px;
+    font-size: medium;
 }
 
 .lecture .show-on-hover{
@@ -151,13 +181,11 @@ td{
     display:none;
 }
 
-.lecture:hover{
-    background: white;
-}
-
 .exercise{
-    color: green;
-    border: white solid 1px;
+    color: white;
+    background: red;
+    border: black solid 3px;
+    font-size: medium;
 }
 
 
@@ -173,20 +201,30 @@ td{
     display:none;
 }
 
-
-.exercise:hover{
-    background:white;
-}
-
-td .free-time .odd{
+.free-time{
     border: none;
-    background: rgb(0, 0, 0,0);
-}
-
-.free-time:hover{
-    background:black;
+    background: green;
+    font-size: medium;
 }
 
 .free-time:hover::after{
-    content:"Volny cas";
+    content:"Voľný čas";
+}
+
+#easter-egg{
+    font-family: 'Comic Sans MS', arial;
+}
+
+.icon{
+    filter:grayscale();
+    width:30px;
+    -webkit-transition: all .5s ease-in-out;  
+}
+
+.icon:hover{
+    filter:none;
+}
+
+.icon-credits{
+    font-size: 40%;
 }
