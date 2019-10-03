@@ -102,7 +102,7 @@ footer{
 }
 
 aside{
-    margin: -1.5% 0 1%;
+    margin: 1.5% 1% 1% 1%;
     float: right;
     border: 1px solid gray;
     border-radius: 10px;
@@ -217,14 +217,55 @@ td{
 
 .icon{
     filter:grayscale();
-    width:30px;
+    width:90px;
     -webkit-transition: all .5s ease-in-out;  
 }
 
-.icon:hover{
+.icon:hover,:focus{
     filter:none;
 }
 
 .icon-credits{
     font-size: 40%;
+}
+
+.two-columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.column{
+    display:flex;
+    flex-direction: column;
+    margin: 5% 10% 10% 10%;
+    width:40%;
+    text-align: center;
+    background:grey;
+    border-radius: 1em;
+    min-height: 10em;
+    font-size: 70%;
+}
+
+
+.img-with-address{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.img-with-address img{
+    border-radius:45%;
+    width:25%;
+}
+.img-with-address address{
+    padding-top:4%;
+}
+
+.column ul{
+    padding: 0;
+}
+
+.column li{
+    list-style-type: none;
 }
