@@ -101,7 +101,7 @@ footer{
     text-align: center;
     float: left;
     padding: 2%;
-    margin: auto 5% auto 5%;
+    margin: auto 5% 5% 5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -126,6 +126,7 @@ aside{
 }
 
 .achievements{
+    clear:both;
     margin: 3rem 2rem auto 1rem;
     text-align: justify;
 }
@@ -133,7 +134,7 @@ aside{
 #wise-quote{
     font-style: italic;
     margin: 1% 2% auto 2%;
-    clear:left;
+
 }
 
 #wise-quote-signature{
