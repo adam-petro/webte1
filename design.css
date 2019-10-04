@@ -32,6 +32,7 @@ html {
     border-bottom: 0.3em;
     border-bottom-style: solid;
     border-bottom-color: rgb(0, 0, 0);
+    z-index: 100;
 }
 
 .nav-links{
@@ -218,11 +219,12 @@ td{
 .icon{
     filter:grayscale();
     width:90px;
-    -webkit-transition: all .5s ease-in-out;  
+
 }
 
 .icon:hover,:focus{
-    filter:none;
+    transition-duration: 1s;
+    filter:saturate(150%);
 }
 
 .icon-credits{
@@ -241,7 +243,7 @@ td{
     margin: 5% 10% 10% 10%;
     width:40%;
     text-align: center;
-    background:grey;
+    background: repeating-linear-gradient(-211deg, rgba(0,0,0,0.6), transparent 64%);
     border-radius: 1em;
     min-height: 10em;
     font-size: 70%;
@@ -257,6 +259,8 @@ td{
 .img-with-address img{
     border-radius:45%;
     width:25%;
+    width: 142px;
+    height: 133px;
 }
 .img-with-address address{
     padding-top:4%;
@@ -269,3 +273,4 @@ td{
 .column li{
     list-style-type: none;
 }
+
