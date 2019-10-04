@@ -4,6 +4,11 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     margin: 0px;
     font-size: 200%;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 html { 
@@ -18,6 +23,7 @@ html {
 .name-title{
     font-size: xx-large;
     margin-left: 1em;
+    font-family: 'Be Vietnam', sans-serif;
 }
 
 .navbar{
@@ -33,6 +39,7 @@ html {
     border-bottom-style: solid;
     border-bottom-color: rgb(0, 0, 0);
     z-index: 100;
+    max-height: 3.4em;
 }
 
 .nav-links{
@@ -49,14 +56,17 @@ html {
 }
 
 .nav-links ul li {
-    border: 2px solid black;
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
     border-right: none;
     display: inline-block;
+    margin: 0 1em 0 auto;
+    border-bottom-left-radius: 1em;
+    border-top-right-radius: 1em;
 }
 
-.nav-links ul li:last-child{
-    border-right: 2px solid black;
-}
+
 
 .nav-links ul li a{
     padding: 0 1em 0 1em;
@@ -65,13 +75,19 @@ html {
 }
 
 footer{
+    bottom: 0;
+    width:100%;
     color: black;
     background: #5580a9;
     font-size: 65%;
     justify-content: center;
     text-align: center;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+}
+
+.timetable-footer{
+   position:absolute;
 }
 
 .img-with-text{
@@ -133,12 +149,12 @@ aside{
     border: black solid 1px;
     color: black;
     font-size: 70%;
-    
+    table-layout: fixed;
 }
 
 
 .header-row th{
-    background: gray;
+   background: gray;
 }
 
 tr{
@@ -152,6 +168,10 @@ tr{
 td{
     text-align: center;
     margin: 1% 1% 1% 1%;
+    font-weight: 600;
+    font-size: large;
+    font-style: oblique;
+    color: black;
 }
 
 
@@ -164,10 +184,10 @@ td{
 }
 
 .lecture{
-    color: white;
-    background: blue;
-    border: black solid 3px;
-    font-size: medium;
+    background: -webkit-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+    background: -o-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+    background: -moz-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+    background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
 }
 
 .lecture .show-on-hover{
@@ -183,10 +203,10 @@ td{
 }
 
 .exercise{
-    color: white;
-    background: red;
-    border: black solid 3px;
-    font-size: medium;
+    background: -webkit-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+    background: -o-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+    background: -moz-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+    background: linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);    
 }
 
 
@@ -203,9 +223,8 @@ td{
 }
 
 .free-time{
-    border: none;
-    background: green;
-    font-size: medium;
+    color: white;
+    background: linear-gradient(45deg, red ,blue);
 }
 
 .free-time:hover::after{
@@ -216,15 +235,22 @@ td{
     font-family: 'Comic Sans MS', arial;
 }
 
+.skill-icon{
+    width: 65px;
+    height: 65px;
+}
+
 .icon{
     filter:grayscale();
     width:90px;
-
+    transition: all 1s;
+    margin-bottom: 1em;
 }
 
 .icon:hover,:focus{
-    transition-duration: 1s;
     filter:saturate(150%);
+    filter:drop-shadow(100%);
+    transform: scale(1.1);
 }
 
 .icon-credits{
@@ -244,6 +270,7 @@ td{
     width:40%;
     text-align: center;
     background: repeating-linear-gradient(-211deg, rgba(0,0,0,0.6), transparent 64%);
+    border: 4px solid white;
     border-radius: 1em;
     min-height: 10em;
     font-size: 70%;
@@ -257,10 +284,11 @@ td{
 }
 
 .img-with-address img{
-    border-radius:45%;
+    border-radius:3em;
     width:25%;
     width: 142px;
     height: 133px;
+    filter: saturate(110%);
 }
 .img-with-address address{
     padding-top:4%;
@@ -274,3 +302,68 @@ td{
     list-style-type: none;
 }
 
+
+.column:last-child ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 0.8em;
+    margin-bottom:0;
+}
+
+.column:last-child ul li:first-child{
+    margin-top: -1em;
+}
+
+.icon-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.icon-row img{
+    width: 30px;
+}
+
+.progress {
+    height: 20px;
+    width: 70%;
+    margin-bottom: 20px;
+    margin-top: 1em;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  .progress-bar {
+    float: left;
+    width: 0%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #337ab7;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    -webkit-transition: width 0.6s ease;
+    -o-transition: width 0.6s ease;
+    transition: width 0.6s ease;
+  }
+  .progress-striped .progress-bar,
+  .progress-bar-striped {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+  }
+  .progress-bar-info {
+    background-color: #5bc0de;
+  }
+  .progress-striped .progress-bar-info {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  }
